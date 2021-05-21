@@ -30,3 +30,11 @@ const button = document.getElementById("button");
 function buttonNone() {
     button.style.backgroundColor = "black";
 }
+
+const parent = document.getElementById("parent");
+
+function add() {
+    var name;
+    name = "asdf"
+    parent.innerHTML = `<button>${name}</button>`
+}
