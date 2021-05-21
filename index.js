@@ -38,3 +38,7 @@ function add() {
     name = "asdf"
     parent.innerHTML = `<button>${name}</button>`
 }
+
+button.addEventListener("mouseover", function() {
+    button.style.width = "100px";
+})
