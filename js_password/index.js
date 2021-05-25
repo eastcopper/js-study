@@ -6,71 +6,45 @@ const fbtn = document.getElementById('fbtn');
 
 
 
-window.onload = function() {
-    for(let i = 0; i < body.children.length; i++) {
-        for(let j = 0; j < body.children[i].children.length; j++) {  
-            if(i * 3 + j + 1 != 10) {
-                body.children[i].children[j].innerHTML=i * 3 + j + 1;
+window.onload = function () {
+    for (let i = 0; i < body.children.length; i++) {
+        for (let j = 0; j < body.children[i].children.length; j++) {
+            if (i * 3 + j + 1 != 10) {
+                body.children[i].children[j].innerHTML = i * 3 + j + 1;
             }
             else {
-                body.children[i].children[j].innerHTML=0;
+                body.children[i].children[j].innerHTML = 0;
             }
-        } 
+        }
     }
 }
 
 let value = [];
 let sum = 0;
 
-for(let i = 0; i < body.children.length; i++) {
-    for(let j = 0; j < body.children[i].children.length; j++) {  
-        if(i * 3 + j + 1 != 10) {
-            body.children[i].children[j].addEventListener('click', function(){
-                value.push(body.children[i].children[j].innerHTML);
-                console.log(value)
-                if(value.length == pw.length){
-                    for(let k = 0; k < pw.length; k++) {
-                        if(value[k] == pw[k]) {
-                            sum += 1;
-                        }
-                        else {
-                            alert('fail');
-                            sum = 0;
-                            value = [];
-                            break;
-                        }
+for (let i = 0; i < body.children.length; i++) {
+    for (let j = 0; j < body.children[i].children.length; j++) {
+        body.children[i].children[j].addEventListener('click', function () {
+            value.push(body.children[i].children[j].innerHTML);
+            if (value.length == pw.length) {
+                for (let k = 0; k < pw.length; k++) {
+                    if (value[k] == pw[k]) {
+                        sum += 1;
                     }
-                    if(sum == pw.length) {
-                        alert('success');
+                    else {
+                        alert('fail');
                         sum = 0;
                         value = [];
+                        break;
                     }
                 }
-            })
-        }
-        else {
-            body.children[i].children[j].addEventListener('click', function(){
-                value.push(body.children[i].children[j].innerHTML);
-                console.log(value)
-                if(value.length == pw.length){
-                    for(let k = 0; k < pw.length; k++) {
-                        if(value[k] == pw[k]) {
-                            sum += 1;
-                        }
-                        else {
-                            alert('fail');
-                            sum = 0;
-                            value = [];
-                            break;
-                        }
-                    }
-                    if(sum == pw.length) {
-                        alert('success');
-                        sum = 0;
-                        value = [];
-                    }
+                if (sum == pw.length) {
+                    alert('success');
+                    sum = 0;
+                    value = [];
                 }
-            })
-        }
-    } 
+            }
+        })
+
+    }
 }
