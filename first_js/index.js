@@ -42,3 +42,7 @@ function add() {
 button.addEventListener("mouseover", function() {
     button.style.width = "100px";
 })
+
+function inputPassword() {
+    document.getElementById("password").innerHTML = "dfjlkd";
+}
