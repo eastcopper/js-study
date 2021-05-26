@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-#volumeControl {
+#button {
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -23,6 +23,14 @@
     margin-left: 70px;
 }
 
-#volumeUp {
+#volumeUp:hover {
+    cursor: pointer;
+}
+
+#timeLength {
+    border-radius: 24px;
+}
+
+#timeLength:hover {
     cursor: pointer;
 }

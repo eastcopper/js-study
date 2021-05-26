@@ -1,6 +1,7 @@
 const audio = document.querySelector('audio');
-let volumeDown = document.getElementById('volumeDown');
-let volumeUp = document.getElementById('volumeUp');
+const volumeDown = document.getElementById('volumeDown');
+const volumeUp = document.getElementById('volumeUp');
+const timeLength30s = document.getElementById('timeLength30s');
 
 audio.volume = 0.5;
 
@@ -13,7 +14,6 @@ volumeDown.addEventListener('click', function () {
     }
     volume -= 0.1;
     audio.volume = volume;
-    console.log(volume);
 })
 
 
@@ -25,5 +25,8 @@ volumeUp.addEventListener('click', function () {
 
     volume += 0.1;
     audio.volume = volume;
-    console.log(volume);
+})
+
+timeLength30s.addEventListener('click', function() {
+    audio.currentTime = 30;
 })
