@@ -1,10 +1,7 @@
 const pw = ['0', '1', '0', '2', '0', '3'];
 
 const body = document.getElementById('body');
-const fbtn = document.getElementById('fbtn');
-
-
-
+const input = document.getElementById('input')
 
 window.onload = function () {
     for (let i = 0; i < body.children.length; i++) {
