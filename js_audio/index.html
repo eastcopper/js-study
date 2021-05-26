@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,18 @@
     <title>audio</title>
     <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-    <audio src="./호미들 - 사이렌 Remix (Feat. UNEDUCATED KID, Paul Blanco) [사이렌 Remix]ㅣLyrics가사.mp3" autoplay controls type="audio/mp3" id="audio"></audio>
-    <div></div>
-    <button id="volumeDown"></button>
-    <button id="volumeUp"></button>
+    <div id="audio">
+        <audio src="./호미들 - 사이렌 Remix (Feat. UNEDUCATED KID, Paul Blanco) [사이렌 Remix]ㅣLyrics가사.mp3" autoplay controls
+            type="audio/mp3"></audio>
+    </div>
+    <div id="volumeControl">
+        <button id="volumeDown">볼륨↓</button>
+        <button id="volumeUp">볼륨↑</button>
+    </div>
+
     <script src="./index.js"></script>
 </body>
+
 </html>

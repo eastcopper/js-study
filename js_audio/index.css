@@ -1,0 +1,28 @@
+#audio {
+    display: flex;
+    justify-content: center;
+}
+
+#volumeControl {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#volumeDown {
+    border-radius: 24px;
+    margin-right: 70px;
+}
+
+#volumeDown:hover {
+    cursor: pointer;
+}
+
+#volumeUp {
+    border-radius: 24px; 
+    margin-left: 70px;
+}
+
+#volumeUp {
+    cursor: pointer;
+}
